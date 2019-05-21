@@ -10,9 +10,12 @@ def Reduce(inp):
   denominator = int(inp[1])
 
   common_Divisor = Differance(Primes(numerator), Primes(denominator))
-  numerator = numerator / common_Divisor
-  denominator = denominator / common_Divisor
-  denominator, numerator = int(denominator), int(numerator)
+  try:
+    numerator = numerator / common_Divisor
+    denominator = denominator / common_Divisor
+    denominator, numerator = int(denominator), int(numerator)
+  except:
+    pass
 
   if denominator == 1:
     print(deco.color("{} => {}".format("/".join(inp), numerator), "green"))
