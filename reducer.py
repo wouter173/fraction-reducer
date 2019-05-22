@@ -10,6 +10,9 @@ def Reduce(inp):
   denominator = int(inp[1])
 
   common_Divisor = Differance(Primes(numerator), Primes(denominator))
+
+  # print(Differance(Primes(300), Primes(200)))
+
   try:
     numerator = numerator / common_Divisor
     denominator = denominator / common_Divisor
@@ -45,6 +48,7 @@ def Differance(list_one, list_two):
       if number_one == number_two:
         finish.append(number_one)
         del list_two[index_two]
+        break
 
   multiplied = 0
   for number in finish:
